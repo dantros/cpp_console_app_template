@@ -10,5 +10,6 @@ set_property(TARGET cpp_console_app PROPERTY CXX_STANDARD 20)
 target_include_directories(cpp_console_app PRIVATE
     "third_party/argparse/include"
     "third_party/whereami2cpp/source"
+    "third_party/spdlog/include"
 )
 target_link_libraries(cpp_console_app PRIVATE whereami2cpp)

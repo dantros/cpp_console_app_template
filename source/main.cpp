@@ -2,6 +2,7 @@
 #include <iostream>
 #include <argparse/argparse.hpp>
 #include <whereami2cpp.h>
+#include <spdlog/spdlog.h>
 
 int main(int argc, char *argv[])
 {
@@ -24,8 +25,9 @@ int main(int argc, char *argv[])
     std::cout << (input * input) << std::endl;
 
     std::string executablePath = whereami::get_executable_path();
-
     std::cout << "whereami? -> " << executablePath << std::endl;
+
+    spdlog::info("spdlog is working!");
 
     return 0;
 }
