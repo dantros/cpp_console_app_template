@@ -3,6 +3,7 @@
 #include <argparse/argparse.hpp>
 #include <whereami2cpp.h>
 #include <spdlog/spdlog.h>
+#include <nlohmann/json.hpp>
 
 int main(int argc, char *argv[])
 {
@@ -28,6 +29,9 @@ int main(int argc, char *argv[])
     std::cout << "whereami? -> " << executablePath << std::endl;
 
     spdlog::info("spdlog is working!");
+
+    nlohmann::json jsonTest = nlohmann::json::parse(R"({"happy": true, "pi": 3.141})");
+    std::cout << "jsonTest -> " << jsonTest.dump() << std::endl;
 
     return 0;
 }
