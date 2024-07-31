@@ -3,8 +3,12 @@ set(CMAKE_LEGACY_CYGWIN_WIN32 OFF)
 
 project(cpp_console_app_project CXX)
 
-set(ARGPARSE_INCLUDE third_party/argparse/include)
+add_subdirectory("third_party/whereami2cpp")
 
 add_executable(cpp_console_app "source/main.cpp")
 set_property(TARGET cpp_console_app PROPERTY CXX_STANDARD 20)
-target_include_directories(cpp_console_app PRIVATE ${ARGPARSE_INCLUDE})
+target_include_directories(cpp_console_app PRIVATE
+    "third_party/argparse/include"
+    "third_party/whereami2cpp/source"
+)
+target_link_libraries(cpp_console_app PRIVATE whereami2cpp)

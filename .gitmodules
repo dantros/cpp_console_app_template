@@ -1,3 +1,6 @@
 [submodule "third_party/argparse"]
 	path = third_party/argparse
 	url = https://github.com/p-ranav/argparse
+[submodule "third_party/whereami2cpp"]
+	path = third_party/whereami2cpp
+	url = https://github.com/dantros/whereami2cpp.git

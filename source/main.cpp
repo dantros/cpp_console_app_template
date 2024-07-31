@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <argparse/argparse.hpp>
+#include <whereami2cpp.h>
 
 int main(int argc, char *argv[])
 {
@@ -21,6 +22,10 @@ int main(int argc, char *argv[])
 
     auto input = program.get<int>("square");
     std::cout << (input * input) << std::endl;
+
+    std::string executablePath = whereami::get_executable_path();
+
+    std::cout << "whereami? -> " << executablePath << std::endl;
 
     return 0;
 }
