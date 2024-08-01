@@ -13,7 +13,7 @@ once you are done, you can generate the build files with cmake presets.
 cmake --presets ninja-release
 ```
 And then, jujst go to `../build_cmake/ninja-release/` and execute `ninja` and you will get your binary file.
-You can also get a Visual Studio solution file for your convenience.
+You can also get a Visual Studio solution file for your convenience, check [CMakePresets.json](CMakePresets.json) file.
 
 yes, you should have [cmake](https://cmake.org/), [ninja](https://ninja-build.org/) and a compiler such as [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) availables in your development environment.
 
